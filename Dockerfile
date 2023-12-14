@@ -1,14 +1,14 @@
-FROM Tepthonee/thesource:slim-buster
+FROM rrr8rr/Runthon:slim-buster
 
-RUN git clone https://github.com/Tepthonee/thesource.git /root/Tepthon
+RUN git clone https://github.com/rrr8rr/Runthon.git /root/Runthon
 
-WORKDIR /root/Tepthon
+WORKDIR /root/Runthon
 
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 RUN npm i -g npm
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/Tepthon/bin:$PATH"
+ENV PATH="/home/Runthon/bin:$PATH"
 
-CMD ["python3","-m","Tepthon"]
+CMD ["python3","-m","Runthon"]
